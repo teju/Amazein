@@ -1,0 +1,4 @@
+include ':fudi-nfc'
+include ':library'
+include ':app'
+rootProject.name = "amazein"

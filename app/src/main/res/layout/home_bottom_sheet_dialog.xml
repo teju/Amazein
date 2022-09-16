@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_margin="@dimen/dim_20"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dim_20"
+        app:cardBackgroundColor="@color/White"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/dark_transparent_grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/dim_20"
+                android:layout_marginRight="@dimen/dim_20"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/txt_big"
+                android:id="@+id/tv_title"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_marginTop="@dimen/dim_20"
+                android:adjustViewBounds="true"
+                android:layout_height="100dp">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/dark_transparent_grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/dim_20"
+                android:layout_marginRight="@dimen/dim_20"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/txt_big"
+                android:id="@+id/tv_desc"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+            </TextView>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dim_20"
+                android:layout_marginRight="@dimen/dim_20"
+                android:id="@+id/btn_cancel"
+                android:layout_marginTop="@dimen/dim_20"
+                android:fontFamily="@font/poppins_regular"
+                android:textAllCaps="false"
+                android:textSize="@dimen/txt_med"
+                android:text="Cancel"
+                android:textColor="@color/Black"
+                android:background="@drawable/rect_rounded_solid"
+                android:layout_marginBottom="@dimen/dim_20"
+                android:layout_height="50dp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

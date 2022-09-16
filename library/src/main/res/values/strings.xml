@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">Loading\nPlease Wait</string>
+    <string name="retry">Retry</string>
+    <string name="amazein__network_error">Internal Error</string>
+    <string name="amazein__no_internet">No Internet connection</string>
+    <string name="amazein__unknown_response">Unknown response from server.\nPlease try again later</string>
+    <string name="no_connection">Poor or no internet connection found.\nPlease check your internet connection.</string>
+
+</resources>
