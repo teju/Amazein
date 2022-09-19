@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
             {
                 triggerMainProcess()
+                imgSplash.visibility = View.GONE
 
 
             }, 1 * 2000
@@ -50,7 +51,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun triggerMainProcess() {
-        imgSplash.visibility = View.GONE
         setFragment(MainTabFragment())
     }
 

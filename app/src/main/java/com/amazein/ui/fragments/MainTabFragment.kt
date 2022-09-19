@@ -58,25 +58,9 @@ class MainTabFragment : BaseFragment() {
         mNavigationDrawerItemTitles?.add("Connect")
         mNavigationDrawerItemTitles?.add("Fixtures")
         mNavigationDrawerItemTitles?.add("Table")
-
         setupToolbar();
-
-        val drawerItem =  ArrayList<NavigationDataModel>()
-
-        drawerItem.add(NavigationDataModel(R.drawable.home, "Connect"));
-        drawerItem.add(NavigationDataModel(R.drawable.home, "Connect"));
-        drawerItem.add(NavigationDataModel(R.drawable.home, "Connect"));
-
         (activity as AppCompatActivity?)!!.supportActionBar?.setDisplayHomeAsUpEnabled(false);
         (activity as AppCompatActivity?)!!.supportActionBar?.setHomeButtonEnabled(true);
-
-        val adapter =  DrawerItemCustomAdapter(
-            activity,
-            R.layout.drawer_item,
-            drawerItem
-        );
-        left_drawer.setAdapter(adapter);
-        left_drawer.setOnItemClickListener(DrawerItemClickListener());
         drawer_layout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle()
         mDrawerToggle?.syncState()
@@ -111,11 +95,6 @@ class MainTabFragment : BaseFragment() {
         } else if (which == FIFTH_TAB) {
             currentTab = FIFTH_TAB
 
-
-        }
-    }
-    private class DrawerItemClickListener : AdapterView.OnItemClickListener {
-        override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
         }
     }

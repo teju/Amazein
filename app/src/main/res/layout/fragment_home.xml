@@ -4,13 +4,166 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/light_grey"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.HomeFragment">
-    <com.amazein.helper.autolooppager.AutoLoopPager
-        android:id="@+id/autoPager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:fillViewport="true"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.amazein.helper.autolooppager.AutoLoopPager
+                android:id="@+id/autoPager"
+                android:layout_width="match_parent"
+                android:layout_height="450dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim_15"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/rect_rounded_solid"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dim_15"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="Get 10% OFF On Your First Test Booking"
+                        android:textColor="@color/White"
+                        android:fontFamily="@font/opensansbold"
+                        android:textSize="@dimen/txt_big"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dim_15"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:text="@string/booking_info"
+                        android:textColor="@color/White"
+                        android:fontFamily="@font/opensansbold"
+                        android:textSize="@dimen/txt_med"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="50dp"
+                        android:textAlignment="center"
+                        android:backgroundTint="@color/White"
+                        android:padding="10dp"
+                        android:layout_marginTop="25dp"
+                        android:imeOptions="actionDone"
+                        android:hint="Your Email Address"
+                        android:background="@drawable/rect_rounded_solid"
+                        android:layout_height="wrap_content">
+                    </EditText>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="@color/White"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="@dimen/dim_15"
+                        android:text="SUBSRIBE"
+                        android:background="@drawable/rect_rounded_solid"
+                        android:layout_height="50dp">
+
+                    </Button>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Health Checkup Packages"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/opensansbold"
+                    android:layout_marginTop="@dimen/dim_20"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/txt_med"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv_health_packages"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:text="Most Popular Tests &amp; Profiles"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/opensansbold"
+                    android:textSize="@dimen/txt_big"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv_popular_test"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:text="Health Risks"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:fontFamily="@font/opensansbold"
+                    android:textSize="@dimen/txt_big"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv_health_risks"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_15"
+                    android:text="What Our Patients Say"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/opensansbold"
+                    android:textSize="@dimen/txt_big"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_reviews"
+                    android:layout_below="@+id/rvnames"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dim_20"
+                    android:layout_marginBottom="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:clipToPadding="false"
+                    android:visibility="visible"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
     <com.amazein.library.views.LoadingCompound
         android:id="@+id/ld"
         android:layout_width="match_parent"

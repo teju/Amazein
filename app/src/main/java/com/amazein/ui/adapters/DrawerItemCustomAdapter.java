@@ -42,9 +42,14 @@ public class DrawerItemCustomAdapter extends ArrayAdapter<NavigationDataModel> {
         NavigationDataModel folder = data.get(position);
 
 
-        imageViewIcon.setImageResource(folder.icon);
+       // imageViewIcon.setImageResource(folder.icon);
         textViewName.setText(folder.name);
 
+        if(position == data.size() - 1) {
+            imageViewIcon.setVisibility(View.VISIBLE);
+        } else {
+            imageViewIcon.setVisibility(View.GONE);
+        }
         return listItem;
     }
 }

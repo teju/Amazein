@@ -28,14 +28,14 @@ public class HomeHeaderAdapter extends RecycleAdapter<HomeHeaderAdapter.ViewHold
 
 
     private final Context context;
-    private List<String> arrayList = new ArrayList<>();
+    private List<Integer> arrayList = new ArrayList<>();
     public ViewClickListener viewClickListener;
 
     public void setViewClickListener(ViewClickListener viewClickListener) {
         this.viewClickListener = viewClickListener;
     }
 
-    public HomeHeaderAdapter(Context context, List<String> arrayList) {
+    public HomeHeaderAdapter(Context context, List<Integer> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
 
@@ -59,13 +59,13 @@ public class HomeHeaderAdapter extends RecycleAdapter<HomeHeaderAdapter.ViewHold
         try {
             final ViewHolder cardLimitViewHolder = (ViewHolder) holder;
             cardLimitViewHolder.imageView.setTag(position);
-
-            if(!TextUtils.isEmpty(arrayList.get(position))) {
+            cardLimitViewHolder.imageView.setImageResource(arrayList.get(position));
+            /*if(!TextUtils.isEmpty(arrayList.get(position))) {
                 cardLimitViewHolder.imageView.setVisibility(View.VISIBLE);
                 new BaseUIHelper().loadImage(context, arrayList.get(position), cardLimitViewHolder.imageView);
             } else {
                 cardLimitViewHolder.imageView.setVisibility(View.GONE);
-            }
+            }*/
         }catch (Exception e){
             e.printStackTrace();
         }

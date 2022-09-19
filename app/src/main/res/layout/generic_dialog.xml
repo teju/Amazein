@@ -67,6 +67,7 @@
                         android:textSize="13dp"
                         android:textColor="@color/White"
                         android:fontFamily="@font/opensansbold"
+                        android:backgroundTint="@color/light_grey_2"
                         android:background="@drawable/rect_rounded_solid"
                         android:layout_marginEnd="30dp"
                         android:layout_gravity="center_horizontal"

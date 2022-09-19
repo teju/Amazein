@@ -4,7 +4,11 @@ import android.app.Activity
 import android.content.Context
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.bumptech.glide.Glide
+
 
 open class BaseUIHelper {
 
@@ -23,5 +27,14 @@ open class BaseUIHelper {
         Glide.with(context!!)
             .load(url).into(img!!)
     }
+
+
+    companion object {
+        fun setSnapper(recyclerView : RecyclerView) {
+            val helper: SnapHelper = LinearSnapHelper()
+            helper.attachToRecyclerView(recyclerView)
+        }
+    }
+
 
 }

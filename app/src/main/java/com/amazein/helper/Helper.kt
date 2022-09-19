@@ -165,6 +165,12 @@ open class Helper {
             }
 
         }
+        fun convertIntoDp(dps: Int,context: Context): Float {
+            val scale: Float = context.resources.displayMetrics.density
+            val pixels = (dps * scale + 0.5f)
+            return pixels
+        }
+
     }
 
 }

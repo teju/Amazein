@@ -9,18 +9,22 @@
 
     <item
         android:id="@+id/tests"
+        android:icon="@drawable/icn_tests"
         android:title="Tests" />
 
     <item
         android:id="@+id/packages"
+        android:icon="@drawable/icn_packages"
         android:title="Packages" />
 
     <item
         android:id="@+id/services"
+        android:icon="@drawable/icn_services"
         android:title="Services" />
 
     <item
         android:id="@+id/profile"
+        android:icon="@drawable/icn_account"
         android:title="My Account" />
 
 </menu>
