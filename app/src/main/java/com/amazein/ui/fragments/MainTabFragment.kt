@@ -83,10 +83,17 @@ class MainTabFragment : BaseFragment() {
 
         } else if (which == SECOND_TAB) {
             currentTab = FIRST_TAB
-
+            home().setOrShowExistingFragmentByTag(
+                R.id.mainLayoutFragment, "SECOND_TAB",
+                "MAIN_TAB", TestsTabFragment(), Helper.listFragmentsMainTab
+            )
 
         } else if (which == THIRD_TAB) {
             currentTab = THIRD_TAB
+            home().setOrShowExistingFragmentByTag(
+                R.id.mainLayoutFragment, "THIRD_TAB",
+                "MAIN_TAB", PackagesTabFragment(), Helper.listFragmentsMainTab
+            )
 
         } else if (which == FOURTH_TAB) {
             currentTab = FOURTH_TAB

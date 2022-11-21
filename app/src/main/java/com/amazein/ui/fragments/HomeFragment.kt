@@ -14,6 +14,7 @@ import com.amazein.helper.BaseUIHelper
 import com.amazein.helper.CenterZoomLinearLayoutManager
 import com.amazein.helper.Helper
 import com.amazein.helper.autolooppager.AutoLoopPager
+import com.amazein.library.helper.ViewClickListener
 import com.amazein.model.Error
 import com.amazein.model.home.Home
 import com.amazein.ui.adapters.*
@@ -62,7 +63,14 @@ class HomeFragment : BaseFragment(),View.OnClickListener {
 
         var autoLoopPager = v?.findViewById(R.id.autoPager) as AutoLoopPager
         formData()
-        val adapter = HomeHeaderAdapter(activity,banners)
+        val adapter = HomeHeaderAdapter(activity,banners,object :
+            ViewClickListener {
+            override fun onViewClick(pos: Int) {
+                    val bookNowFragment = BookNowFragment()
+                    home().setFragment(bookNowFragment)
+            }
+
+        })
         autoLoopPager.setAdapter(adapter)
         autoLoopPager.setAutoPlay(true);
         //autoLoopPager.setAspectRatio(16f / 9f);

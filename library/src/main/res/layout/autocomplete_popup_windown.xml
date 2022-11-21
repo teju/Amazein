@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/White"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/primary_header_color"
+            android:layout_gravity="center"
+            android:id="@+id/tvTitle" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/tiSearch"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true">
+
+        <com.amazein.library.helper.ClearableEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/etSearch"
+            android:inputType="textCapWords"
+            android:imeOptions="actionSearch"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_below="@+id/tiSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/Black"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:background="#FFFFFF">
+    </ListView>
+
+    <com.amazein.library.helper.QuickScroll
+        android:id="@+id/quickScroll"
+        android:layout_below="@id/tiSearch"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@+id/lv"
+        android:layout_alignBaseline="@+id/lv"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

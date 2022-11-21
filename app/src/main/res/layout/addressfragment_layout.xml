@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppThemeSlide.PopupOverlay" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/White"
+            android:layout_gravity="center"
+            android:id="@+id/tbTitle" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LLRoot"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/header_color" />
+                <com.amazein.library.helper.ClearableAutoCompleteTextViewAsDropDown
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingRight="@dimen/dim_15"
+                    android:textSize="@dimen/txt_med"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:background="@drawable/rect_rounded_solid_outline"
+                    android:id="@+id/etIDCity"
+                    android:hint="City"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/header_color" />
+                <com.amazein.library.helper.ClearableAutoCompleteTextViewAsDropDown
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingRight="@dimen/dim_15"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/txt_med"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:background="@drawable/rect_rounded_solid_outline"
+                    android:id="@+id/etIDState"
+                    android:hint="State"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/header_color" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingRight="@dimen/dim_15"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textSize="@dimen/txt_med"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/rect_rounded_solid_outline"
+                    android:id="@+id/etIDAddress"
+                    android:hint="Address"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zip Code"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/header_color" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textSize="@dimen/txt_med"
+                    android:imeOptions="actionDone"
+                    android:paddingRight="@dimen/dim_15"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/dim_15"
+                    android:background="@drawable/rect_rounded_solid_outline"
+                    android:id="@+id/etIDcode"
+                    android:hint="Zip Code" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="@color/White"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="@dimen/txt_med"
+                    android:layout_marginTop="@dimen/dim_50"
+                    android:layout_marginBottom="@dimen/dim_50"
+                    android:text="Book Now"
+                    android:background="@drawable/rect_rounded_solid"
+                    android:layout_height="50dp">
+
+                </Button>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+</ScrollView>
+    <com.amazein.library.views.LoadingCompound
+        android:id="@+id/ld"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

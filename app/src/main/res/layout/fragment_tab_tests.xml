@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/White"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/opensansregular"
+        android:textSize="@dimen/txt_med"
+        android:layout_marginLeft="@dimen/dim_15"
+        android:id="@+id/tv_test_count"
+        android:textColor="@color/Black"
+        android:text="Showing 1-100 of 122 results"
+        android:layout_marginTop="@dimen/dim_20"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv_tests"
+        app:spanCount="2"
+        android:layout_marginTop="@dimen/dim_20"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

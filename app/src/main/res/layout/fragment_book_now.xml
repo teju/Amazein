@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:backgroundTint="@color/header_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppThemeSlide.PopupOverlay" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Appointment"
+            android:textSize="20sp"
+            android:textColor="@color/White"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/tbTitle" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/White"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_marginLeft="@dimen/dim_15"
+            android:layout_marginRight="@dimen/dim_15"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Higher Standards of Care Everyday"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:minHeight="50dp"
+                android:textSize="@dimen/txt_med"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionNext"
+                android:hint="First Name"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/dim_10"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:textSize="@dimen/txt_med"
+                android:minHeight="50dp"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionNext"
+                android:hint="Last Name"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone/Mobile :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:minHeight="50dp"
+                android:textSize="@dimen/txt_med"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionNext"
+                android:hint="Phone/Mobile"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:minHeight="50dp"
+                android:textSize="@dimen/txt_med"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionDone"
+                android:hint="Your Email Address"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Age :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+            <com.amazein.library.helper.ClearableAutoCompleteTextViewAsDropDown
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:paddingRight="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_15"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:ems="10"
+                android:id="@+id/actGender"
+                android:hint="Gender"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Gender :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:minHeight="50dp"
+                android:textSize="@dimen/txt_med"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionDone"
+                android:hint="Patient Gender"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address :"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+            <TextView
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:minHeight="50dp"
+                android:paddingLeft="@dimen/dim_20"
+                android:imeOptions="actionDone"
+                android:hint="Address"
+                android:gravity="center_vertical"
+                android:id="@+id/tv_address"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/rect_rounded_solid_outline"
+                android:layout_height="wrap_content">
+            </TextView>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_tc"
+                android:text="I have read and agree to the Terms and Conditions and Privacy Policy"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="50dp"
+                android:buttonTint="@color/colorPrimary"
+                android:paddingLeft="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/White"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/txt_med"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_50"
+                android:text="Book Now"
+                android:background="@drawable/rect_rounded_solid"
+                android:layout_height="50dp">
+
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/book_now_bg"
+        android:alpha="0.1"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent">
+
+    </ImageView>
+    <com.amazein.library.views.LoadingCompound
+        android:id="@+id/ld"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

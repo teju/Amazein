@@ -20,7 +20,7 @@ import java.util.List;
  * Created by chanpyaeaung on 30/11/16.
  */
 
-public class HomeHealthPacDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
+public class TestPacDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
 
     private final Context context;
@@ -31,7 +31,7 @@ public class HomeHealthPacDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
         this.viewClickListener = viewClickListener;
     }
 
-    public HomeHealthPacDetailsAdapter(Context context, List<HolderTag> holderTags) {
+    public TestPacDetailsAdapter(Context context, List<HolderTag> holderTags) {
         this.context = context;
         this.holderTags = holderTags;
 
@@ -39,7 +39,7 @@ public class HomeHealthPacDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home_health_pack_details, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tests_pack_details, parent, false);
         return new HomeHealthPackDetailsViewHolder(view);
     }
 
@@ -48,11 +48,7 @@ public class HomeHealthPacDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
         try {
             final HomeHealthPackDetailsViewHolder cardLimitViewHolder = (HomeHealthPackDetailsViewHolder) holder;
             cardLimitViewHolder.itemView.setTag(position);
-            if(position %2 == 0) {
-                cardLimitViewHolder.itemView.setBackgroundColor(context.getResources().getColor(R.color.White));
-            } else {
-                cardLimitViewHolder.itemView.setBackgroundColor(context.getResources().getColor(R.color.light_grey));
-            }
+
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -62,7 +58,7 @@ public class HomeHealthPacDetailsAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 4;
     }
 
     private static class HomeHealthPackDetailsViewHolder extends RecyclerView.ViewHolder {

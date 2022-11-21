@@ -11,4 +11,6 @@
     <string name="ok">OK</string>
     <string name="booking_info">Sign Up to Offers and all the latest information on managing your own health and Save 10% on your first test.</string>
     <string name="review">Amaze In Labs is a well equipped facility for all types of diagnostic tests at Indore. Latest testing equipment\'s and friendly staff with great emphasis on quality and hygiene.</string>
+    <string name="address">Address</string>
+    <string name="please_select_gender">Select Gender</string>
 </resources>

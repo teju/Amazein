@@ -1,4 +1,4 @@
-package com.amazein.interfaces;
+package com.amazein.library.helper;
 
 /**
  * Created by chanpyaeaung on 26/9/16.

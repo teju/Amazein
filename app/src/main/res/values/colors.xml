@@ -7,4 +7,5 @@
     <color name="transparent">#00000000</color>
     <color name="light_grey">#eaeaea</color>
     <color name="light_grey_2">#ACA5A5</color>
+    <color name="header_color" >#11113B</color>
 </resources>

@@ -2,19 +2,16 @@ package com.amazein.ui.adapters
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.Paint
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazein.R
-import com.amazein.helper.BaseUIHelper
 import com.amazein.helper.Helper
-import com.amazein.interfaces.ViewClickListener
+import com.amazein.library.helper.ViewClickListener
 import com.amazein.model.cert.HolderTag
 import java.util.*
 
@@ -24,7 +21,7 @@ import java.util.*
 class HomeHealthRisksAdapter(private val context: Context, holderTags: List<HolderTag>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var holderTags: List<HolderTag> = ArrayList()
-    var viewClickListener :ViewClickListener? = null
+    var viewClickListener : ViewClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context)

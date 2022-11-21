@@ -1,21 +1,16 @@
 package com.amazein.ui.adapters;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazein.R;
-import com.amazein.helper.BaseUIHelper;
 import com.amazein.helper.autolooppager.RecycleAdapter;
-import com.amazein.interfaces.ViewClickListener;
-import com.amazein.model.cert.HolderTag;
+import com.amazein.library.helper.ViewClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +30,10 @@ public class HomeHeaderAdapter extends RecycleAdapter<HomeHeaderAdapter.ViewHold
         this.viewClickListener = viewClickListener;
     }
 
-    public HomeHeaderAdapter(Context context, List<Integer> arrayList) {
+    public HomeHeaderAdapter(Context context, List<Integer> arrayList,ViewClickListener viewClickListener) {
         this.context = context;
         this.arrayList = arrayList;
+        this.viewClickListener = viewClickListener;
 
     }
 
@@ -66,6 +62,13 @@ public class HomeHeaderAdapter extends RecycleAdapter<HomeHeaderAdapter.ViewHold
             } else {
                 cardLimitViewHolder.imageView.setVisibility(View.GONE);
             }*/
+
+            cardLimitViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    viewClickListener.onViewClick((int)v.getTag());
+                }
+            });
         }catch (Exception e){
             e.printStackTrace();
         }

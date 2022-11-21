@@ -5,4 +5,5 @@
     <color name="dark_transparent_grey">#65000000</color>
     <color name="light_grey">#E5E5E5</color>
     <color name="Gray">#5C5858</color>
+    <color name="primary_header_color">#11113B</color>
 </resources>
